@@ -827,9 +827,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="КЕЙС - Как увеличить скорость чтения данных в Greenplum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       Скрипт для создания таблички
@@ -837,8 +838,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       Загрузка данных
@@ -846,8 +847,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#yezzey" class="md-nav__link">
     <span class="md-ellipsis">
       Загрузка в Yezzey
@@ -855,8 +856,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       Скрипт для создания партциий
@@ -864,8 +865,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       Выводы
@@ -873,8 +874,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#sql" class="md-nav__link">
     <span class="md-ellipsis">
       SQL запрос
@@ -882,8 +883,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       Выводы:
@@ -891,11 +892,25 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       Ниже привожу планы запросов для каждого из кейсов:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      КЕЙС - Как мониторить подвисшие сенсоры?
     </span>
   </a>
   
@@ -934,7 +949,7 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/103580753" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <h1 id="_1">Реальные задачи на работе</h1>
-<h3 id="-">КЕЙС - Витрина данных</h3>
+<h2 id="-">КЕЙС - Витрина данных</h2>
 <p><strong>Витрина данных</strong> – это просто табличка, которая уже сто раз отфильтрована, где-то очищена от лишних данных. Но у витрины данных могут быть разные источники. Например, у меня витрина собиралась из данных по дебетовым картам, кредитным картам, ипотекам, вкладам и так далее. Реально много разных источников-таблиц. Каждый источник обновляет у себя данные в разное время. У кого-то данные готовы за вчера, а где-то только за позавчера. </p>
 <p>Поэтому если мы будет запускать расчет витрины с одной датой за вчера (Т-1), то по каким-то источникам мы прочитаем свежие данные, а по каким-то будет 0 строк (данные в источнике еще не добавились). Че делать?</p>
 <p>Я начал логировать в отдельную таблицу последнюю дату загрузки данных по каждому продукту во время расчета витрины. И при следующем запуске, мой скрипт ходит в таблицу с метаданными и читает для каждого продукта (карты, кредиты, вклады и т.д.) свою максимальную дату.</p>
@@ -976,7 +991,7 @@
 </span></code></pre></div>
 <p>Можем представить, что источник по Вкладам сдох и таблица с вкладами новых данных не имеет. Через месяц ее починят и наш скрипт начнет с той даты, которая была последней в витрине данных. При этом другие продукты никак не пострадают. </p>
 <hr />
-<h3 id="-dbt">КЕЙС - Использование dbt</h3>
+<h2 id="-dbt">КЕЙС - Использование dbt</h2>
 <p>Ко мне пришли аналитики. У них было три SQL скрипта длиной в 500-800 строк. В этих SQL было очень много операций CASE WHEN и дальше какое-то условие, типа
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">CASE</span><span class="w"> </span>
@@ -1053,7 +1068,7 @@
 <p>И теперь аналитики могут просто добавлять сколько угодно своих дополнительных условий в этот файлик, а dbt будет автоматически читать оттуда все строчки и подставлять в запрос и выполнять его!</p>
 <p>И теперь вместо 800 строк SQL кода у нас есть простой SQL запрос и txt файлик.</p>
 <hr />
-<h3 id="-greenplum-greenplum">КЕЙС - Из старого Greenplum в новый Greenplum</h3>
+<h2 id="-greenplum-greenplum">КЕЙС - Из старого Greenplum в новый Greenplum</h2>
 <p>Была ситуация - был старый кластер Greenplum. В нем были таблицы, которые надо было перенести в новый Greenplum. Перетаскивать можно разными способами.</p>
 <p>Вот первый способ в лоб:
 Берем Apache Spark, подключаемся по jdbc к Гринпламу, пишем запрос и читаем данные. НО! В случае чтения Спарком через JDBC у нас все данные льются через мастер-хост. То самое бутылочное горлышко. Здесь можно обмануть всех и читать по отдельности с каждого сегмента Greenplum. Например добавить фильтр WHERE gp_segment_id = 0(1, 2, 3, 4 и так далее). Тогда мы сильно разгрузим матсерхост.</p>
@@ -1092,7 +1107,7 @@
 </span></code></pre></div></p>
 <p>Собственно в новом ГП мы делаем тоже самое, но уже не <code>INSERT INTO</code>, а просто читаем, типа <code>SELECT * FROM TABLE</code>. Это займет конечно время, если таблица огромная, но это всяко легче и быстрее, чем два предыдущих способа.</p>
 <hr />
-<h3 id="-greenplum">КЕЙС - Как увеличить скорость чтения данных в Greenplum</h3>
+<h2 id="-greenplum">КЕЙС - Как увеличить скорость чтения данных в Greenplum</h2>
 <p><strong>Проблема:</strong></p>
 <p>Есть таблица в Greenplum. Она много весит и долго читается. Нужно, чтобы не занимала место в GP, но при этом быстро читалась. Короче убить двух зайцев.</p>
 <p><strong>Какие есть варианты решения:</strong></p>
@@ -1315,6 +1330,112 @@
 </span></code></pre></div></p>
 </li>
 </ul>
+<hr />
+<h2 id="-_1">КЕЙС - Как мониторить подвисшие сенсоры?</h2>
+<p><strong>Кейс взят у <a href="https://t.me/data_engineerette">Айгуль (Канал дата инженеретта)</a></strong></p>
+<p>Начнем с того, что в Airflow есть несколько состояний для таски:</p>
+<table>
+<thead>
+<tr>
+<th>Эмодзи</th>
+<th>Статус</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔵</td>
+<td>none</td>
+<td>пока отдыхает</td>
+</tr>
+<tr>
+<td>🟡</td>
+<td>scheduled</td>
+<td>должна быть запущена, все зависимости выполнены</td>
+</tr>
+<tr>
+<td>⚪</td>
+<td>queued</td>
+<td>ждет свободный воркер</td>
+</tr>
+<tr>
+<td>🟢</td>
+<td>running</td>
+<td>работает</td>
+</tr>
+<tr>
+<td>✅</td>
+<td>success</td>
+<td>успешно завершилась</td>
+</tr>
+<tr>
+<td>🌸</td>
+<td>restarting</td>
+<td>перезапустили</td>
+</tr>
+<tr>
+<td>🔴</td>
+<td>failed</td>
+<td>упала</td>
+</tr>
+<tr>
+<td>🚫</td>
+<td>skipped</td>
+<td>пропущена</td>
+</tr>
+<tr>
+<td>🔻</td>
+<td>upstream_failed</td>
+<td>упала предыдущая таска, которая нам нужна</td>
+</tr>
+<tr>
+<td>🔄</td>
+<td>up_for_retry</td>
+<td>упала, но будет перезапущена</td>
+</tr>
+<tr>
+<td>🔂</td>
+<td>up_for_reschedule</td>
+<td>сенсор будет перезапущен</td>
+</tr>
+<tr>
+<td>⏸</td>
+<td>deferred</td>
+<td>отложена и ждет триггер</td>
+</tr>
+<tr>
+<td>❌</td>
+<td>removed</td>
+<td>удалена из дага после запуска</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Подвисшие сенсоры уходят в статус deferred.
+У нас они имеют такой нейминг - mytask_awaiting_somedag.
+Я написала себе запрос, который выводит:</p>
+<p>⭕️ название дага, на который смотрит сенсор</p>
+<p>⭕️ количество сенсоров, которые ждут этот даг</p>
+<p>⭕️ общее количество подвисших сенсоров</p>
+<p>И так можно сразу понять, на какой даг смотрит наибольшее количество сенсоров, и посмотреть причину</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">with</span><span class="w"> </span><span class="n">sensored</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="n">substr</span><span class="p">(</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">      </span><span class="n">task_id</span><span class="p">,</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">      </span><span class="n">strpos</span><span class="p">(</span><span class="n">task_id</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;awaiting_&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">length</span><span class="p">(</span><span class="s1">&#39;awaiting_&#39;</span><span class="p">)</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">sensor</span><span class="p">,</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">    </span><span class="n">dag_id</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">airflow</span><span class="p">.</span><span class="k">public</span><span class="p">.</span><span class="n">task_instance</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="k">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;deferred&#39;</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="p">)</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="k">select</span>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="w">  </span><span class="n">sensor</span><span class="p">,</span>
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="w">  </span><span class="k">count</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">over</span><span class="p">(</span><span class="n">partition</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">sensor</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">sensor_cnt</span><span class="p">,</span>
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="w">  </span><span class="k">count</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">over</span><span class="p">()</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_cnt</span><span class="p">,</span>
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="w">  </span><span class="n">dag_id</span>
+</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="k">from</span><span class="w"> </span><span class="n">sensored</span>
+</span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="k">desc</span><span class="p">,</span><span class="w"> </span><span class="n">sensor</span><span class="p">,</span><span class="w"> </span><span class="n">dag_id</span><span class="p">;</span>
+</span></code></pre></div>
 
 
 
