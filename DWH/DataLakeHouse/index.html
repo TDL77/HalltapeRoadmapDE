@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://roadmappers.ru/Git/THEORY/">
+        <link rel="canonical" href="https://roadmappers.ru/DWH/DataLakeHouse/">
       
       
       
@@ -801,38 +801,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#github" class="md-nav__link">
+  <a href="#datalakehouse" class="md-nav__link">
     <span class="md-ellipsis">
-      Как подключиться к Github?
+      DataLakehouse
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Как подключиться к Github?">
+    <nav class="md-nav" aria-label="DataLakehouse">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#git" class="md-nav__link">
+  <a href="#data-lakehouse" class="md-nav__link">
     <span class="md-ellipsis">
-      Что такое GIT?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Что такое GIT?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Создаем собственный репозиторий.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ssh-" class="md-nav__link">
-    <span class="md-ellipsis">
-      Прокидываем SSH-ключ.
+      Почему появился Data Lakehouse?
     </span>
   </a>
   
@@ -842,66 +823,85 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#datalakehouse_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Джентельменский набор команд
+      DataLakehouse
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Джентельменский набор команд">
+    <nav class="md-nav" aria-label="DataLakehouse">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#git-clone" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      git clone
+      Введение
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#git-addrestore" class="md-nav__link">
+  <a href="#lakehouse" class="md-nav__link">
     <span class="md-ellipsis">
-      git add/restore
+      Архитектура и компоненты Lakehouse
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Архитектура и компоненты Lakehouse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-storage-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Слой хранения данных (Storage Layer)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#git-commit" class="md-nav__link">
+  <a href="#2-open-table-formats" class="md-nav__link">
     <span class="md-ellipsis">
-      git commit
+      2. Форматы таблиц (Open Table Formats)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#git-push" class="md-nav__link">
+  <a href="#3-catalog-layer" class="md-nav__link">
     <span class="md-ellipsis">
-      git push
+      3. Каталоги и метаданные (Catalog Layer)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#git-pull" class="md-nav__link">
+  <a href="#4-compute-layer" class="md-nav__link">
     <span class="md-ellipsis">
-      git pull
+      4. Слой вычислений (Compute Layer)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#git-branchcheckout" class="md-nav__link">
+  <a href="#5-bi-bi-analytics-layer" class="md-nav__link">
     <span class="md-ellipsis">
-      git branch/checkout
+      5. BI и аналитика (BI &amp; Analytics Layer)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-governance-security-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Управление и безопасность (Governance &amp; Security Layer)
     </span>
   </a>
   
@@ -950,170 +950,101 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/103580753" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <h2 id="_1">Куратор раздела</h2>
-<p><img align="left" width="200" src="./../../png/shust.jpg" /></p>
-<p><strong>Шустиков Владимир</strong>, оставивший военную жизнь позади и ушедший в данные с головой. Работаю с данными более 2х лет и останавливаться не собираюсь! Веду:</p>
-<p><a href="https://t.me/Shust_DE">Telegram канал</a></p>
-<p><a href="https://www.youtube.com/@shust_de">Youtube канал</a></p>
-<p>Если хочешь сменить текущую профессию на Дата Инженера — пиши не стесняйся, я сам проходил этот не легкий путь и тебе помогу https://t.me/ShustDE</p>
-<p>Хочешь улучшить текущий раздел, внести недостающее или поправить формулировку? Предлагай PR и тегай <a href="https://github.com/ShustGF">@ShustGF</a>.</p>
-<h1 id="github">Как подключиться к Github?</h1>
-<p><strong>Github</strong>  - это обычный сайт, где каждый может загрузить туда cвой код или скачать его оттуда. Есть репозитории (на "земном" папки ), в которых и хранится вся информация. Ниже инструкция, как работать с <strong>github</strong>.</p>
-<p><strong><em>С гитом можно работать, как через Terminal, так и через VSCode или другую IDE (последнее проще).</em></strong></p>
+<p><img align="left" width="200" src="../../png/amp.jpg" /></p>
+<p><strong>Подвальный Артем</strong>, 
+                                                                                                                      Data Engineer</p>
+<p><a href="https://t.me/dataengineerlab">Канал Data Engineer Lab</a></p>
+<p>Хочешь перейти в дата-инженерию, но не знаешь с чего начать? Пиши -  составим резюме, продумаем твое развитие <a href="https://t.me/ampodvalniy">https://t.me/ampodvalniy</a></p>
+<p>Хочешь улучшить текущий раздел, внести недостающее или поправить формулировку? Предлагай PR и тегай <a href="https://github.com/Artemlin6231">@Artemlin6231</a></p>
+<h1 id="datalakehouse">DataLakehouse</h1>
+<h2 id="data-lakehouse">Почему появился Data Lakehouse?</h2>
+<p>Традиционные <strong>Data Warehouse (DWH)</strong> хорошо справлялись с аналитикой по
+структурированным данным, но имели ограничения: высокая стоимость,
+жёсткие схемы и слабая поддержка машинного обучения.</p>
+<p><strong>Data Lake</strong> стал ответом на эти проблемы: он позволил хранить любые данные
+(сырые, полу- и неструктурированные) в дешёвых масштабируемых
+объектных хранилищах (S3, ADLS, GCS). Однако озёра данных не
+обеспечивали транзакционность (ACID), контроль качества и удобный SQL-доступ.</p>
+<p><strong>Data Lakehouse</strong> объединяет лучшее из двух миров:
+- гибкость и низкую стоимость озёр данных,
+- надёжность и транзакционность хранилищ.</p>
+<p>Благодаря открытым табличным форматам (Apache Iceberg, Delta Lake, Apache Hudi)
+Lakehouse стал единым слоем для BI, аналитики, потоковой обработки и
+машинного обучения. Сегодня он рассматривается как архитектурный стандарт
+для современных платформ данных.</p>
+<p align="center">
+    <img src="../../png/history_data.png" alt="map_reduce"/>
+</p>
+
+<h1 id="datalakehouse_1">DataLakehouse</h1>
+<h2 id="_2">Введение</h2>
+<p><strong>Data Lakehouse</strong> — это архитектура, которая объединяет в себе преимущества 
+традиционного <strong>Data Warehouse (DWH)</strong> и гибкого <strong>Data Lake</strong>.<br />
+Она позволяет хранить данные любого типа в дешёвом масштабируемом хранилище 
+и работать с ними с помощью SQL, потоковой обработки и ML/AI.</p>
 <hr />
-<h2 id="git">Что такое GIT?</h2>
-<p>GIT - это фреймворк или просто система контроля версий.
-Ты мне не поверишь, но она нужна исключительно для того,
-чтобы контролировать, как изменяется твой проект(каталог с текстовыми файликами).
-Чтобы в случае проблем ты мог быстро откатиться на шаг или несколько назад, не более того.</p>
-<p><strong>Установка Git</strong></p>
-<p>Чтобы работать с Git, нужно его установить <a href="https://git-scm.com/downloads/mac">вот так на Mac</a> или <a href="https://git-scm.com/downloads/win">вот так на Win</a></p>
-<blockquote>
-<p>git нужен, чтобы вы могли скачивать и загружать свой код со своего компьютера на GitHub и обратно,
-а также отслеживать версии кода, но об этом чуть позже.</p>
-</blockquote>
-<h3 id="_2">Создаем собственный репозиторий.</h3>
-<p>Создать репозиторий очень просто:</p>
-<ol>
-<li>Зайди во вкладку <strong>Repositories</strong></li>
-<li>Нажми зелёную кнопку <strong>New</strong></li>
-</ol>
-<p align="center">
-    <img src="./../../png/git_step1.png" alt="GITHUB" width="640" height="380"/>
-</p>
-
-<ol>
-<li>Впиши уникальное имя твоего проекта</li>
-<li>Выбери публичный или приватный репозиторий</li>
-<li>Я люблю создавать репозиторий с созданым файлом <strong>READMY</strong>, а ты делай как хочешь</li>
-<li>Нажми большую, зелёную кнопку <strong>Create repository</strong></li>
-</ol>
-<p align="center">
-    <img src="./../../png/git_step2.png" alt="GITHUB" width="600" height="600"/>
-</p>
-
-<p>Не так уж тяжело, ну если вдруг тяжело, то может ну это IT ты задумайтся!</p>
-<h3 id="ssh-">Прокидываем SSH-ключ.</h3>
-<p>Чтобы скачать и загрузить изменения в свой репозиторий в первую очередь необходимо добавить, так называемый SSH-ключ. Грубо говоря с помощью него твое пространство в GITHUB будет понимать, что твоему компьютеру можно доверять и применять изменения, в противном случае <strong>access denied</strong>, ёпт...</p>
-<p>Ну что го прокидывать, тут тоже ниче сложного, смотри:</p>
-<ol>
-<li>Заходишь в свой терминал или git bash</li>
-<li>Прописиваешь команду 
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ssh-keygen
-</span></code></pre></div></li>
-<li>тебе предложат изменить каталог где будет хранится ключ и ввести кодовую фразу для генерации ключа, забей болтяру и жми как все специ 3 раз <strong>Enter</strong></li>
-</ol>
-<p align="center">
-    <img src="./../../png/git_ssh_keygen.png" alt="GITHUB" width="840" height="320"/>
-</p>
-
-<ol>
-<li>Тебе нужно зайти в файл с <strong>публичным</strong>(не перепутай с приватным и вообще никому не показывай приватный ключ, НИ-КОГ-ДА!) ключом и <strong>скопировать</strong> его.</li>
-<li>Возвращайся в GITHUB</li>
-<li>Тыкай на своего перосонажа и переходи в настройки</li>
-</ol>
-<p align="center">
-    <img src="./../../png/git_ssh_keygen2.png" alt="GITHUB" width="240" height="350"/>
-</p>
-
-<ol>
-<li>С правой стороны перейди во вкладку <strong>SSH and GPG keys</strong> и тыкни очередную большую, зелёную кнопку <strong>New SSH key</strong></li>
-</ol>
-<p align="center">
-    <img src="./../../png/git_ssh_keygen3.png" alt="GITHUB" width="840" height="320"/>
-</p>
-
-<ol>
-<li>Придумай название и вставь скопированый ключ и не промаж по БОЛЬШОЙ, ЗЕЛЕНОЙ КНОПКЕ.</li>
-</ol>
-<p align="center">
-    <img src="./../../png/git_ssh_keygen4.png" alt="GITHUB" width="440" height="300"/>
-</p>
-
-<p>Всё ты молодец, самое сложное, то что делается навернео 1 раз в жизни, ну может 2, ты переосилил.</p>
-<h2 id="_3">Джентельменский набор команд</h2>
-<p>Сейчас мы рассмотрим то, что необходимо знать каждому уважающему себя IT-шнику, который сталкивается с гитом.</p>
-<h3 id="git-clone">git clone</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>&lt;адрес<span class="w"> </span>репозитория&gt;<span class="w"> </span>
-</span></code></pre></div>
-<p>По сути это самая первая команда, которая клонирует репозиторий в твой каталог.</p>
-<p>Адрес репозитория находится в ЗЕЛЕНОЙ кнопке <strong>Code</strong> во вкладке <strong>SSH</strong></p>
-<p align="center">
-    <img src="./../../png/git_clone.png" alt="GITHUB" width="440" height="320"/>
-</p>
-
-<p>Как это работает:
-1) Ты отправляешь запрос на клонирование
-2) К тебе скачиваются в локальный репозиторий файлы 
-3) Ты начинаешь с ними работать</p>
-<p align="center">
-    <img src="./../../png/git_clone1.png" alt="GITHUB" width="840" height="520"/>
-</p>
-
-<h3 id="git-addrestore">git add/restore</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>add<span class="w"> </span>&lt;файл/каталог&gt;
-</span></code></pre></div>
-<p>Это прям пушка команда, перед тем как тебе отправить данные на изменения в общий репозиторий, тебе необходимо сказать гиту, какие именно файлы ты хочешь отправить в GITHUB.</p>
-<p align="center">
-    <img src="./../../png/git_add.png" alt="GITHUB" width="540" height="320"/>
-</p>
-
-<p>А теперь представь ты добавил не тот каталог или файл, что делать, ну конечно нужно удалить твое добавление, делается это так:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>restore<span class="w"> </span>&lt;файл/каталог&gt;
-</span></code></pre></div>
-<p>Ну в целом вот что произойдет с твоим файлом.</p>
-<p align="center">
-    <img src="./../../png/git_restore.png" alt="GITHUB" width="540" height="320"/>
-</p>
-
-<h3 id="git-commit">git commit</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>commit<span class="w"> </span>–m<span class="w"> </span>“&lt;комментарий<span class="w"> </span>к<span class="w"> </span>коммиту&gt;”
-</span></code></pre></div>
-<p>Это самая важная команда и постоянно идет в ногу с командой добавления. Данная команда присваивает твоим изменениям индентификатор, по которому можно все твое добро отследить.</p>
-<p align="center">
-    <img src="./../../png/git_commit.png" alt="GITHUB" width="640" height="320"/>
-</p>
-
-<h3 id="git-push">git push</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>&lt;имя<span class="w"> </span>ветки&gt;
-</span></code></pre></div>
-<p>Ну всё, это, по сути, конечная команда в твоей работе, которая отправляет твои изменения в репозиторий.</p>
-<p align="center">
-    <img src="./../../png/git_push.png" alt="GITHUB" width="540" height="420"/>
-</p>
-
-<h3 id="git-pull">git pull</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>&lt;имя<span class="w"> </span>ветки&gt;
-</span></code></pre></div>
-<p>Куча народу запушила свои измения в репозиторий, теперь необходимо, скачать все эти измения. Просто выполни команду выше.</p>
-<p align="center">
-    <img src="./../../png/git_pull.png" alt="GITHUB" width="540" height="420"/>
-</p>
-
-<p>О чудо... Но это еще не всё, мы преходим к самой страшной теме ВЕТОККККК....</p>
-<h3 id="git-branchcheckout">git branch/checkout</h3>
-<p>Слушай я честно скажу, что не знаю чего все боятся этих веток, но просто запомни следующие команды.</p>
+<h2 id="lakehouse">Архитектура и компоненты Lakehouse</h2>
+<h3 id="1-storage-layer">1. Слой хранения данных (Storage Layer)</h3>
 <ul>
-<li>выдает список веток</li>
+<li>Используются объектные хранилища: <strong>Amazon S3, Azure Data Lake Storage (ADLS), Google Cloud Storage (GCS), HDFS</strong>.  </li>
+<li>Поддерживаются все типы данных:</li>
+<li><strong>Структурированные</strong>: таблицы в формате Parquet, ORC, Avro.  </li>
+<li><strong>Полуструктурированные</strong>: JSON, CSV, логи, события.  </li>
+<li><strong>Неструктурированные</strong>: изображения, аудио, видео, документы.  </li>
+<li>Основные свойства: низкая стоимость хранения, горизонтальная масштабируемость, независимость от вычислительных ресурсов.</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>branch
-</span></code></pre></div>
+<hr />
+<h3 id="2-open-table-formats">2. Форматы таблиц (Open Table Formats)</h3>
+<p>Это ключевая инновация, превращающая «просто озеро» в <strong>Lakehouse</strong>.<br />
+- Популярные реализации: <strong>Apache Iceberg, Delta Lake, Apache Hudi</strong>.<br />
+- Основные возможности:
+  - <strong>ACID-транзакции</strong> — гарантии целостности и согласованности данных.<br />
+  - <strong>Time travel и снапшоты</strong> — возможность читать таблицу в прошлом состоянии.<br />
+  - <strong>Эволюция схемы и партиционирования</strong> без перелива данных.<br />
+  - <strong>Оптимизация запросов</strong> — partition pruning, min/max статистики, Bloom-фильтры.<br />
+- Табличный слой абстрагирует физическое хранение файлов и делает данные доступными через SQL-интерфейсы.</p>
+<hr />
+<h3 id="3-catalog-layer">3. Каталоги и метаданные (Catalog Layer)</h3>
 <ul>
-<li>создает новую ветку</li>
+<li>Хранят сведения о таблицах, их схемах и снимках:  </li>
+<li><strong>Hive Metastore, AWS Glue, Project Nessie, REST/JDBC-каталоги</strong>.  </li>
+<li>Функции:</li>
+<li>Регистрация и управление таблицами.  </li>
+<li>Отслеживание истории изменений (снапшоты, версии).  </li>
+<li>Обеспечение согласованности между разными движками (Spark, Flink, Trino и т. д.).  </li>
+<li>Это «точка входа» для всех клиентов Lakehouse.</li>
 </ul>
-<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>branch<span class="w"> </span>&lt;имя<span class="w"> </span>ветки&gt;
-</span></code></pre></div>
-- переключение на ветку</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>&lt;имя<span class="w"> </span>ветки&gt;
-</span></code></pre></div>
+<hr />
+<h3 id="4-compute-layer">4. Слой вычислений (Compute Layer)</h3>
 <ul>
-<li>создает и переключаетcя на новую ветку</li>
+<li>Lakehouse поддерживает различные сценарии обработки:</li>
+<li><strong>Batch</strong>: Apache Spark, Trino, Dremio, Presto.  </li>
+<li><strong>Streaming</strong>: Apache Flink, Structured Streaming, Kafka + Iceberg/Hudi/Delta.  </li>
+<li><strong>ML/AI</strong>: PyTorch, TensorFlow, Spark MLlib, MLflow.  </li>
+<li>Возможности:</li>
+<li>Массовая аналитическая обработка (OLAP).  </li>
+<li>Real-time аналитика на потоках.  </li>
+<li>Подготовка датасетов для моделей машинного обучения.  </li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>&lt;имя<span class="w"> </span>ветки&gt;
-</span></code></pre></div>
-<p>Тут в целом расписывать очень долго поэому я порекомендую посмотреть моё видео(➜ <a href="https://youtu.be/dflUnlOTUic">Видео по работе с github / git на примере Bootcamp'а</a>), где я объясняю принцип работы с ветками и возникающие коализии. Но если хочешь можешь попробовать разобраться сам, лови картинку:</p>
-<p align="center">
-    <img src="./../../png/git_branch.png" alt="GITHUB" width="840" height="320"/>
-</p>
+<hr />
+<h3 id="5-bi-bi-analytics-layer">5. BI и аналитика (BI &amp; Analytics Layer)</h3>
+<ul>
+<li>BI-инструменты подключаются напрямую к Lakehouse:</li>
+<li>Power BI, Tableau, Looker, Superset.  </li>
+<li>Возможности:</li>
+<li>SQL-доступ без выгрузки данных в отдельный DWH.  </li>
+<li>Поддержка интерактивных дашбордов и batch-отчётов.  </li>
+<li>Объединение BI и Data Science на едином источнике данных.  </li>
+</ul>
+<hr />
+<h3 id="6-governance-security-layer">6. Управление и безопасность (Governance &amp; Security Layer)</h3>
+<ul>
+<li>Ключевой слой для корпоративного использования:</li>
+<li><strong>Data Governance</strong>: контроль качества данных, аудит, каталогизация.  </li>
+<li><strong>Data Lineage</strong>: отслеживание происхождения и преобразований данных.  </li>
+<li><strong>Безопасность</strong>: row-level / column-level security, маскирование, RBAC/ABAC.  </li>
+<li>Интеграция с каталогами данных: <strong>Collibra, Atlan, Apache Atlas</strong>.  </li>
+</ul>
 
 
 
